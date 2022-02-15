@@ -15,10 +15,10 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabDownloadScreen from '../screens/TabDownloadScreen';
-import TabHomeScreen from '../screens/TabHomeScreen';
-import TabSearchScreen from '../screens/TabSearchScreen';
-import TabComingSoonScreen from '../screens/TabComingSoonScreen';
+import DownloadScreen from '../screens/DownloadScreen';
+import HomeScreen from '../screens/HomeScreen';
+import SearchScreen from '../screens/SearchScreen';
+import ComingSoonScreen from '../screens/ComingSoonScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -67,7 +67,7 @@ function BottomTabNavigator() {
       }}>
       <BottomTab.Screen
         name="TabHome"
-        component={TabHomeScreen}
+        component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'TabHome'>) => ({
           title: 'Home',
           tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color} />,
@@ -89,7 +89,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="TabComingSoon"
-        component={TabComingSoonScreen}
+        component={ComingSoonScreen}
         options={{
           title: 'Coming soon',
           tabBarIcon: ({ color }) => <MaterialIcons name="video-library" size={24} color={color}  />,
@@ -97,7 +97,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="TabSearch"
-        component={TabSearchScreen}
+        component={SearchScreen}
         options={{
           title: 'Search',
           tabBarIcon: ({ color }) => <Ionicons name="search" size={24} color={color}/>,
@@ -105,7 +105,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="TabDownload"
-        component={TabDownloadScreen}
+        component={DownloadScreen}
         options={{
           title: 'Downloads',
           tabBarIcon: ({ color }) => <MaterialIcons name="video-library" size={24} color={color}  />,
